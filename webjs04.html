@@ -1,0 +1,31 @@
+<html>
+<head>
+  <script type="text/javascript">
+   let jus = ["Mangga","Jambu","Durian"];
+
+   for (var i = jus.length - 1; i >= 0; i--) {
+   	 document.write("jus " +  jus[i] + "<br/>");
+   }
+
+   document.write("<hr/>");
+   jus.push("Sirsak");
+   for (var i=0 ; i< jus.length ; i++){
+   	 document.write("jus " +  jus[i] + "<br/>");
+   }
+
+  </script>
+</head>
+<body>
+<hr/>
+ <div id="jus"></div>
+<script type="text/javascript">
+    let idjus = document.getElementById("jus");
+	for (var i = 0; i < jus.length; i++) {
+		idjus.innerHTML= idjus.innerHTML + "Buah " + jus[i] + "<br/>";
+	}
+
+</script>
+
+
+</body>
+</html>
