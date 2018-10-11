@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fungsi Js</title>
+<script type="text/javascript">
+function tambah(){
+	let frm1 = document.getElementById("frm");
+	let angka1 = parseFloat(frm1.bil1.value);
+	let angka2 = parseFloat(frm1.bil2.value);
+	let angka3 = angka1 + angka2;
+
+	let area_hasil = 
+	        document.getElementById("hasil");
+	area_hasil.innerHTML=angka3;
+}
+function operasi(operator){
+	let frm1 = document.getElementById("frm");
+	let angka1 = parseFloat(frm1.bil1.value);
+	let angka2 = parseFloat(frm1.bil2.value);
+	let angka3 = 0;
+
+	if(operator=="+"){
+	   angka3 = angka1 + angka2;
+	}
+	else if(operator=="-"){
+	   angka3 = angka1 - angka2;
+	}
+	else if(operator=="x"){
+	   angka3 = angka1 * angka2;
+	}
+	else if(operator==":"){
+	   angka3 = angka1 / angka2;
+	}
+
+	let area_hasil = 
+	        document.getElementById("hasil");
+	area_hasil.innerHTML=angka3;
+}
+</script>
+</head>
+<body>
+<form id="frm">
+ Bilangan 1 : 
+    <input type="number" name="bil1" value="">
+ <br/>
+ Bilangan 2 : 
+    <input type="number" name="bil2" value="">
+ <br/>
+ <input type="button" name="" value="+" 
+          onclick="operasi('+')"/>
+ <input type="button" name="" value="-" 
+          onclick="operasi('-')">
+</form>
+Hasil : <span id="hasil"></span>
+</body>
+</html>
