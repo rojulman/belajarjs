@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fungsi JavaScript</title>
+	<script type="text/javascript">	
+	function jumlah(a, b){
+		let c = a + b ;
+		return c;
+	}
+
+	function hitung(){
+	   let frm = document.getElementById("frm1");
+	   let x1 = parseInt(frm.bil1.value);
+       let x2 = parseInt(frm.bil2.value);
+       let x3 = jumlah(x1,x2);
+	   alert(x3);
+	   let area_hasil = document.getElementById("hasil");
+	   area_hasil.innerHTML=x3;
+	}
+	</script>
+</head>
+<body>
+<form id="frm1">
+  Bilangan 1 :
+  <input type="number" value=""  size="10" name="bil1"/>
+  <br/>
+  Bilangan 2 : 
+  <input type="number" value="" size="10" name="bil2"/>
+  <br/>
+  <input type="button" value="+" onclick="hitung()">
+  <br/>
+  Hasil : <span id="hasil"></span>
+</form>
+</body>
+</html>
