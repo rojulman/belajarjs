@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Latihan JS</title>
+<script type="text/javascript">
+	let fb1 = {
+		nama  :"Novi",
+		status:"Lagi Belajar JS Galau !!",
+		jumlah_like:0,
+		like:function(fans){
+			console.log(fans + " like status");
+			this.jumlah_like = this.jumlah_like + 1;
+		},
+		rating:function(){
+			if(this.jumlah_like <= 5){
+				console.log("Status BIASA");
+			}else if(this.jumlah_like >5 && 
+				this.jumlah_like <=10 ){
+				console.log("Status OK");
+			}else{
+				console.log("Status VIRAL");
+			}
+		}
+	};
+
+	console.log("Status " + fb1.nama + " : " +
+		fb1.status + " LIKE : " + fb1.jumlah_like);
+	fb1.like("karin");
+	fb1.like("silmi");
+	fb1.like("dosen");
+	fb1.like("dosen 1");
+	fb1.like("dosen 2");
+	fb1.like("dosen 3");
+	fb1.like("dosen 4");
+	console.log("Status " + fb1.nama + " : " +
+		fb1.status + " LIKE : " + fb1.jumlah_like);
+	fb1.rating();
+	
+
+
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>
